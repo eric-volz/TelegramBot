@@ -1,5 +1,5 @@
 from TelegramBot import TelegramBot
-from TelegramBotAnswerFunctions import TelegramBotAnswerFunctions
+from functions import TelegramBotAnswerFunctions
 from secrets import Key
 import threading as th
 import time
