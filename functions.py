@@ -31,3 +31,5 @@ class functions:
                 string = string + u + "\n"
 
             return "Diese Server sind nicht Online: \n" + string
+            
+        print("Hallo")
