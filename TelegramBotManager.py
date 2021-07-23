@@ -1,11 +1,10 @@
 from TelegramBot import TelegramBot
-from functions import TelegramBotAnswerFunctions
-from secrets import Key
+from functions import functions
 import threading as th
 import time
 
 
-class TelegramBotManager(TelegramBot, TelegramBotAnswerFunctions):
+class TelegramBotManager(TelegramBot, functions):
     def __init__(self, token, chatID, updateTime):
         """
         Initalisiert den TelegramBot und den TelegramManager

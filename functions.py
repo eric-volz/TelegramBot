@@ -1,7 +1,7 @@
 import requests
 
 
-class TelegramBotAnswerFunctions:
+class functions:
 
     @staticmethod
     def checkIfServerIsOnline(url):
@@ -16,7 +16,7 @@ class TelegramBotAnswerFunctions:
                 "https://travelknuffis.de"]
         notWorking = []
         for u in urls:
-            data = TelegramBotAnswerFunctions.checkIfServerIsOnline(u)
+            data = functions.checkIfServerIsOnline(u)
             try:
                 if data.status_code != 200:
                     notWorking.append(u + ": " + str(data))

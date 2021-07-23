@@ -1,6 +1,6 @@
-from secrets import Key
 import requests
 import json
+
 
 class TelegramBot:
     def __init__(self, token, chatID):
@@ -47,9 +47,10 @@ class TelegramBot:
         :param text: gesendete Nachricht
         :return: responce, ob erfolgreich: 200 == erfolgreich
         """
-        params = {"chat_id" : self.chatID, "text" : text}
+        params = {"chat_id": self.chatID, "text": text}
         responce = requests.post(self.url + "sendMessage", params=params)
         return responce
+
 
 if __name__ == "__main__":
     pass
