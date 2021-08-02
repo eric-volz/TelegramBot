@@ -24,7 +24,11 @@ class TelegramBot:
         url = "https://api.telegram.org/bot" + str(token) + "/"
         data = requests.get(url + "getUpdates")
         j = json.loads(data.text)
-        return j["result"][-1]["message"]["chat"]["id"]
+        try:
+            return j["result"][-1]["message"]["chat"]["id"]
+        except Exception as e:
+            raise Exception("Es ist Ein Fehler aufgetreten: Zum erfassen der Chat ID, muss eine Nachricht in den Chat "
+                            "geschireben werden")
 
     def getUpdate(self):
         """
