@@ -50,7 +50,3 @@ class TelegramBot:
         params = {"chat_id": self.chatID, "text": text}
         responce = requests.post(self.url + "sendMessage", params=params)
         return responce
-
-
-if __name__ == "__main__":
-    pass

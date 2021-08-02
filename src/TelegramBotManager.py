@@ -1,10 +1,9 @@
-from TelegramBot import TelegramBot
-from functions import functions
+from .TelegramBot import TelegramBot
 import threading as th
 import time
 
 
-class TelegramBotManager(TelegramBot, functions):
+class TelegramBotManager(TelegramBot):
     def __init__(self, token, chatID, updateTime):
         """
         Initalisiert den TelegramBot und den TelegramManager
@@ -105,7 +104,3 @@ class TelegramBotManager(TelegramBot, functions):
                 print("Die Commands konnten nicht hinzugefügt werden, da sie nicht den Richtlinien entsprechen!")
                 return False
             return True
-
-
-if __name__ == "__main__":
-    pass
